@@ -142,6 +142,7 @@ public:
     void setFfmpegLocation(string loc) { ffmpegLocation = loc; }
     void setVideoCodec(string codec) { videoCodec = codec; }
     void setAudioCodec(string codec) { audioCodec = codec; }
+    void setFfmpegOptions(string options) { ffmpegOptions = options; }
     void setVideoBitrate(string bitrate) { videoBitrate = bitrate; }
     void setAudioBitrate(string bitrate) { audioBitrate = bitrate; }
 
@@ -169,7 +170,7 @@ private:
     string moviePath;
     string videoPipePath, audioPipePath;
     string ffmpegLocation;
-    string videoCodec, audioCodec, videoBitrate, audioBitrate, pixelFormat;
+    string videoCodec, audioCodec,ffmpegOptions, videoBitrate, audioBitrate, pixelFormat;
     int width, height, sampleRate, audioChannels;
     float frameRate;
 

@@ -228,6 +228,7 @@ ofxVideoRecorder::ofxVideoRecorder(){
     videoBitrate = "2000k";
     audioBitrate = "128k";
     pixelFormat = "rgb24";
+    ffmpegOptions = "";
 }
 
 //--------------------------------------------------------------
@@ -248,6 +249,7 @@ bool ofxVideoRecorder::setup(string fname, int w, int h, float fps, int sampleRa
     << " -b " << videoBitrate
     << " -acodec " << audioCodec
     << " -ab " << audioBitrate
+    << "  " << ffmpegOptions
     << " " << absFilePath;
 
     return setupCustomOutput(w, h, fps, sampleRate, channels, outputSettings.str(), sysClockSync, silent);
